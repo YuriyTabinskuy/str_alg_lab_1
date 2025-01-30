@@ -1,0 +1,35 @@
+<project>
+  <parent>
+    <artifactId>A</artifactId>
+    <groupId>maven</groupId>
+    <version>1.0</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>maven</groupId>
+  <artifactId>B</artifactId>
+  <packaging>pom</packaging>
+  <name>B</name>
+  <version>1.0</version>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>test</groupId>
+        <artifactId>d</artifactId>
+        <version>1.0</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>test</groupId>
+      <artifactId>a</artifactId>
+      <version>1.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>test</groupId>
+      <artifactId>c</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+</project>
